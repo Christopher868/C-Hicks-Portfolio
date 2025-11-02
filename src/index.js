@@ -8,5 +8,4 @@ document.addEventListener('click', (e) => {
     } else if(e.target.closest('svg') !== menuBtn && e.target.closest('div') !== collapsingMenu){
         collapsingMenu.classList.add('hidden');
     }
-    console.log(e.target)
 });
