@@ -4,8 +4,11 @@ const collapsingMenu = document.querySelector('#collapsing-menu')
 // Click event for toggle dropdown menu
 document.addEventListener('click', (e) => {
     if(e.target.closest('svg') === menuBtn) {
-        collapsingMenu.classList.toggle('hidden');
+        const closed = collapsingMenu.classList.contains('w-0')
+        closed ? collapsingMenu.classList.replace('w-0', 'w-50') : collapsingMenu.classList.replace('w-50', 'w-0');
+       
     } else if(e.target.closest('svg') !== menuBtn && e.target.closest('div') !== collapsingMenu){
-        collapsingMenu.classList.add('hidden');
+            collapsingMenu.classList.replace('w-50', 'w-0');
     }
+    
 });
