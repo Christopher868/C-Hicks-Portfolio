@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/images/favicon.ico" />
+    <link rel="stylesheet" href="/src/tailwind.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christopher's Portfolio</title>
+  </head>
+
+  <body class="bg-slate-800 flex flex-col items-center box-border overflow-x-hidden">
+    <!-- Nav Bar -->
+    <header class="w-full">
+      <nav class="z-10 w-full bg-slate-800 px-4 py-4 flex justify-between items-center h-16 shadow-2xl sm:px-8">
+        <h1 class="text-white text-center text-lg font-bold xs:text-xl sm:text-2xl text-shadow-sm hover:text-shadow-lg text-shadow-slate-600 hover:cursor-default">Christopher's Portfolio</h1>
+        <ul class="gap-1 font-semibold text-white text-shadow-sm text-shadow-slate-600 hidden sm:flex">
+          <a href="#projects" class="hover:shadow-sm py-2 px-4 rounded-xl active:shadow-inner shadow-white"><li>Projects</li></a>
+          <a href="#contact" class="hover:shadow-sm py-2 px-4 rounded-xl active:shadow-inner shadow-white"><li>Contact Me</li></a>
+          <a href="#about-me" class="hover:shadow-sm py-2 px-4 rounded-xl active:shadow-inner shadow-white"><li>About</li></a>
+        </ul>
+        
+        <!-- Menu button and collapsing dropdown menu -->
+        <div class="relative sm:hidden ">
+          <svg id="menu-btn" class="fill-white size-7 sm:size-8 hover:drop-shadow-md hover:drop-shadow-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          <div id="collapsing-menu" class="z-10 h-screen fixed top-0 right-0 bg-slate-800 shadow-lg text-shadow-sm text-shadow-slate-600 transition-all duration-500 w-0 overflow-x-hidden">
+            <ul class="gap-2 font-semibold text-white whitespace-nowrap flex flex-col items-center p-4">
+              <svg id="menu-close-btn" class="mr-auto fill-white size-7 sm:size-8 hover:drop-shadow-md hover:drop-shadow-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+              <a href="#projects" class="hover:shadow-sm py-2 px-4 rounded-xl active:shadow-inner shadow-white"><li>Projects</li></a>
+              <a href="#contact" class="hover:shadow-sm shadow-white py-2 px-4 rounded-xl active:shadow-inner"><li>Contact Me</li></a>
+              <a href="#about-me" class="hover:shadow-sm shadow-white py-2 px-4 rounded-xl active:shadow-inner"><li>About</li></a>
+            </ul>
+          </div>   
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main image, Introduction, Projects, and about me section -->
+    <main class=" w-full flex flex-col items-center">
+      <section class=" z-1 h-80 w-full bg-[url(https://picsum.photos/1600/800)] bg-cover bg-left flex justify-left items-center text-left sm:h-100 md:h-120 lg:h-140">
+        <h2 class="w-60 p-4 ml-5 sm:ml-10 md:ml-15 lg:ml-20 font-semibold text-white text-xs text-shadow-lg  backdrop-blur-xl  rounded-3xl tracking-tight text sm:text-md md:text-lg lg:text-2xl sm:p-6 sm:w-xs md:w-md lg:w-xl"><span class="text-lg font-black md:text-2xl lg:text-3xl">Hello!</span> my name is Christopher Hicks. I am recent graduate with a Bachelor's degree in Information Technology aspiring to start a career in fullstack, frontend, or backended web development.</h2>
+      </section>
+
+     
+      <section class="w-full flex justify-center flex-wrap">
+
+        <!-- projects section -->
+        <section id="projects" class=" h-full w-full flex flex-col items-center border-t-2 border-b-2 border-blue-400">
+          <div class="py-4 w-full flex justify-center items-center ">
+            <h3 class="w-fit text-center font-bold text-2xl text-white text-shadow-sm hover:text-shadow-lg">&larr; Projects &rarr;</h3>
+          </div>
+
+          <!-- containers for projects -->
+          <div id="project-container" class="w-full bg-linear-to-tr from-white via-blue-100 to-blue-50 flex justify-center">
+            <div id="project-content" class="text-blue-400 w-fit max-w-[1850px] flex snap-x snap-mandatory px-20 py-10 gap-10 overflow-x-auto">
+
+              <!-- Projects -->
+
+              <div class="bg-white shrink-0 h-145 w-95 snap-center px-3 py-5 font-bold shadow-lg rounded-2xl border-2 border-blue-50 flex flex-col gap-4 items-center">
+                <h4 class="text-shadow-sm hover:text-shadow-lg text-xl">Recipe Exchange</h4>
+                <img class="w-11/12 rounded-2xl border shadow-sm hover:shadow-xl border-black/15" src="/src/images/recipe-exchange-sm.png" alt="picture of recipe exchange website">
+                <div class="flex flex-col items-center px-5">
+                  <h5>Project Info</h5>
+                  <p class="text-black text-center font-normal text-sm line-clamp-4">Recipe Exchange is a website that allows users to create their own recipes, view other user's recipes, and search for recipes by recipe name or recipe author.</p>
+                </div>
+                <div class="text-center">
+                  <span class="text-lg text-blue-400 font-semibold">Built With</span>
+                  <p class="text-black font-normal">Django, Css, Html, Js, Squlite3</p>
+                </div>
+                <div class="flex gap-5 text-white mt-auto">
+                  <a href="https://github.com/Christopher868/recipe-sharing-website.git"><button type="button" class="bg-slate-800 px-8 py-2 rounded-2xl shadow-sm shadow-blue-400 border border-blue-100 hover:shadow-md hover:text-blue-400 active:shadow-inner hover:cursor-pointer">Github</button></a>
+                  <a href="https://christopher868.pythonanywhere.com/"><button type="button" class="bg-slate-800 px-8 py-2 rounded-2xl shadow-sm shadow-blue-400 border border-blue-100 hover:shadow-md hover:text-blue-400 active:shadow-inner hover:cursor-pointer">Website</button></a>
+                </div>
+              </div>
+
+              <div class="bg-white shrink-0 h-145 w-95 snap-center px-3 py-5 font-bold shadow-lg rounded-2xl border-2 border-blue-50 flex flex-col gap-4 items-center">
+                <h4 class="text-shadow-sm hover:text-shadow-lg text-xl">LushLawns</h4>
+                <img class="w-11/12 rounded-2xl border shadow-sm hover:shadow-xl border-black/15" src="https://picsum.photos/600/400" alt="picture of lushlawns website">
+                <div class="flex flex-col items-center px-5">
+                  <h5>Project Info</h5>
+                  <p class="text-black text-center font-normal text-sm line-clamp-4">Lush Lawns is a website for purchasing lawn mower parts. The idea for this website was taken from a group project that was not completed due to not enough time.</p>
+                </div>
+                <div class="text-center">
+                  <span class="text-lg text-blue-400 font-semibold">Built With</span>
+                  <p class="text-black font-normal">Django, Css, Html, Js, Squlite3</p>
+                </div>
+                <div class="flex gap-5 text-white mt-auto">
+                  <a href="https://github.com/Christopher868/LushLawns.git"><button type="button" class="bg-slate-800 px-8 py-2 rounded-2xl shadow-sm shadow-blue-400 border border-blue-100 hover:shadow-md hover:text-blue-400 active:shadow-inner hover:cursor-pointer">Github</button></a>
+                  <a href="#"><button type="button" class="bg-slate-800 px-8 py-2 rounded-2xl shadow-sm shadow-blue-400 border border-blue-100 hover:shadow-md hover:text-blue-400 active:shadow-inner hover:cursor-pointer">Website</button></a>
+                </div>
+              </div>
+              
+              <div class="bg-white shrink-0 h-145 w-95 snap-center px-3 py-5 font-bold shadow-lg rounded-2xl border-2 border-blue-50 flex flex-col gap-4 items-center">
+                <h4 class="text-shadow-sm hover:text-shadow-lg text-xl">My Portfolio</h4>
+                <img class="w-11/12 rounded-2xl border shadow-sm hover:shadow-xl border-black/15" src="https://picsum.photos/600/400" alt="picture of lushlawns website">
+                <div class="flex flex-col items-center px-5">
+                  <h5>Project Info</h5>
+                  <p class="text-black text-center font-normal text-sm line-clamp-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias non suscipit quos vel at quaerat, corrupti sequi id explicabo, nemo vero, accusantium quibusdam asperiores totam eum nam dicta aliquam magnam!</p>
+                </div>
+                <div class="text-center">
+                  <span class="text-lg text-blue-400 font-semibold">Built With</span>
+                  <p class="text-black font-normal line-clamp-2">Vite, Tailwind Css, Html, Javascript, Node.js</p>
+                </div>
+                <div class="flex gap-5 text-white mt-auto">
+                  <a href="#"><button type="button" class="bg-slate-800 px-8 py-2 rounded-2xl shadow-sm shadow-blue-400 border border-blue-100 hover:shadow-md hover:text-blue-400 active:shadow-inner hover:cursor-pointer">Github</button></a>
+                  <a href="#"><button type="button" class="bg-slate-800 px-8 py-2 rounded-2xl shadow-sm shadow-blue-400 border border-blue-100 hover:shadow-md hover:text-blue-400 active:shadow-inner hover:cursor-pointer">Website</button></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- about me section -->
+        <section id="about-me" class="h-fit w-full flex flex-col items-center">
+          <div class="py-4 w-full flex justify-center items-center ">
+            <h3 class="w-fit text-center font-bold text-2xl text-shadow-sm text-white hover:text-shadow-lg">About Me</h3>
+          </div>
+
+          <!-- container for about me -->
+           <div class=" mx-20 py-20 px-4 flex flex-wrap justify-center items-center gap-x-30 gap-y-10 w-full h-full bg-linear-to-tl from-white via-blue-100 to-blue-50">
+            <img class="w-full max-w-100 rounded-xl h-80 hover:shadow-2xl border" src="https://picsum.photos/400/300" alt="">
+            <p class="p-5 h-fit text-center font-medium text-md sm:text-lg tracking-tight leading-6 w-full max-w-100 overflow-y-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat debitis pariatur tenetur, ad, qui omnis magni nemo accusantium autem odio reprehenderit, vel recusandae similique</p>
+           </div>
+        </section>
+      </section>
+
+    </main>
+
+    <!-- Footer with contact information! -->
+    <footer id="contact" class="w-full py-2 h-fit flex flex-col items-center bg-slate-800 text-white border-t-2 border-t-blue-400">
+      <h3 class=" w-full text-center border-b font-bold text-2xl pb-2 mb-2">Contact me!</h3>
+       
+      <!-- Contact Info -->
+      <div class="flex flex-col items-center gap-1 text-center">
+        <p><span class="font-bold">Email(preferred):</span><a class="hover:text-blue-400" href="mailto:christopherhicks868@gmail.com"> Christopherhicks868@gmail.com</a></p>
+        <p><span class="font-bold">Phone Number:</span> 678-993-8083</p>
+        <div class="flex gap-4">
+          <p><a class="hover:text-blue-400 font-semibold" href="www.linkedin.com/in/christopher-hicks-830737251">LinkedIn</a></p>
+          <p><a class="hover:text-blue-400 font-semibold" href="https://app.joinhandshake.com/profiles/bz8dvg">Handshake</a></p>
+          <p><a class="hover:text-blue-400 font-semibold" href="https://github.com/Christopher868">Github</a></p>
+        </div>
+        <p class="mt-5 mb-3">Christopher Hicks&copy;</p>
+      </div>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="/src/index.js"></script>
+  </body>
+
+</html>
