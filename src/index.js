@@ -5,6 +5,17 @@ const collapsingMenu = document.querySelector('#collapsing-menu')
 const projectContent = document.querySelector('#project-content')
 const navBar = document.querySelector('#navbar')
 
+// Adds projects from supabase and sets scroll position to middle.
+async function loadProjects() {
+    await addProjects();
+    const scrollPosiition = (projectContent.scrollWidth - projectContent.clientWidth) / 2
+
+    projectContent.scrollLeft = scrollPosiition;
+}
+
+// call to load projects
+loadProjects();
+
 
 // Click event for toggle dropdown menu
 document.addEventListener('click', (e) => {
@@ -17,19 +28,12 @@ document.addEventListener('click', (e) => {
     }
 });
 
+
 // Closes side menu after reaching sm breakpoint
 window.addEventListener('resize', () => {
     if(window.innerWidth >= 640){
         collapsingMenu.classList.replace('w-50', 'w-0');
     }
-})
-
-// Makes Scroll bar start in middle on refresh
-document.addEventListener('DOMContentLoaded', () => {
-    const scrollPosiition = (projectContent.scrollWidth - projectContent.clientWidth) / 2
-
-    projectContent.scrollLeft = scrollPosiition;
-
 })
 
 
@@ -43,5 +47,3 @@ window.addEventListener('scroll', () =>{
         navBar.classList.replace('shadow-sm', 'shadow-lg')
     }
 })
-
-addProjects();
