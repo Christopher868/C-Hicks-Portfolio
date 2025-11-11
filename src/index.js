@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+// Makes navbar invisible when user starts scrolling
 window.addEventListener('scroll', () =>{
     if(window.scrollY > 64){
         navBar.classList.replace('bg-slate-800', 'bg-transparent')
