@@ -1,3 +1,4 @@
+import { addProjects } from "./getProjects";
 const menuBtn = document.querySelector('#menu-btn');
 const closeBtn = document.querySelector('#menu-close-btn')
 const collapsingMenu = document.querySelector('#collapsing-menu')
@@ -43,3 +44,4 @@ window.addEventListener('scroll', () =>{
     }
 })
 
+addProjects();
