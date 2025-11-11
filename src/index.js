@@ -2,6 +2,7 @@ const menuBtn = document.querySelector('#menu-btn');
 const closeBtn = document.querySelector('#menu-close-btn')
 const collapsingMenu = document.querySelector('#collapsing-menu')
 const projectContent = document.querySelector('#project-content')
+const navBar = document.querySelector('#navbar')
 
 
 // Click event for toggle dropdown menu
@@ -23,28 +24,21 @@ window.addEventListener('resize', () => {
 })
 
 // Makes Scroll bar start in middle on refresh
-const scrollPosiition = (projectContent.scrollWidth - projectContent.clientWidth) / 2
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollPosiition = (projectContent.scrollWidth - projectContent.clientWidth) / 2
 
-projectContent.scrollLeft = scrollPosiition;
+    projectContent.scrollLeft = scrollPosiition;
 
-// Testing Api
+})
 
-async function testFetchFromBackend() {
-    try {
-        const response = await fetch('/api/projects');
 
-        if(!response.ok){
-            throw new Error(`Error: ${response.status}`)
-        }
-
-        const data = await response.json();
-        console.log(data);
-        return data;
-    } catch(err) {
-        console.error(`Fetched Failed: ${err}`);
+window.addEventListener('scroll', () =>{
+    if(window.scrollY > 64){
+        navBar.classList.replace('bg-slate-800', 'bg-transparent')
+        navBar.classList.replace('shadow-lg', 'shadow-sm')
+    } else {
+        navBar.classList.replace('bg-transparent', 'bg-slate-800')
+        navBar.classList.replace('shadow-sm', 'shadow-lg')
     }
-}
-
-testFetchFromBackend();
-
+})
 
